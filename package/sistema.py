@@ -1,6 +1,30 @@
+from package.jogador import Jogador
+from package.ranking import Ranking
+from package.quiz import Quiz
+from package.pergunta import MultiplaEscolha, VerdadeiroFalso
+
+
 class Sistema:
     def __init__(self):
-        pass
+        from package.ranking import Ranking        
+        self._ranking = Ranking()
+        self._ranking.carregar_de_arquivo()
+
+    def jogar_quiz(self):
+        quiz = Quiz()
+
+        p1 = MultiplaEscolha("Quem venceu a NBA em 2020?", ["Lakers", "Heat", "Celtics"], "Lakers")
+        p2 = VerdadeiroFalso("Michael Jordan jogou pelo Chicago Bulls.", "Verdadeiro")
+
+        quiz.adicionar_pergunta(p1)
+        quiz.adicionar_pergunta(p2)
+
+        nome = input("Digite seu nome: ")
+        pontuacao = quiz.jogar()
+
+        jogador = Jogador(nome, pontuacao)
+        self._ranking.adicionar_jogador(jogador)
+        self._ranking.salvar_em_arquivo()
 
     def menu_principal(self):
         while True:
@@ -11,9 +35,10 @@ class Sistema:
             escolha = input("Escolha uma opção: ")
 
             if escolha == "1":
-                print("Função 'Jogar' ainda não implementada.")
+                self.jogar_quiz()
             elif escolha == "2":
-                print("Função 'Ver ranking' ainda não implementada.")
+                self._ranking.exibir()
+
             elif escolha == "3":
                 print("Saindo...")
                 break
