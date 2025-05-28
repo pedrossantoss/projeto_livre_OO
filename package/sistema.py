@@ -14,10 +14,27 @@ class Sistema:
         quiz = Quiz()
 
         p1 = MultiplaEscolha("Quem venceu a NBA em 2020?", ["Lakers", "Heat", "Celtics"], "Lakers")
-        p2 = VerdadeiroFalso("Michael Jordan jogou pelo Chicago Bulls.", "Verdadeiro")
+        p2 = MultiplaEscolha("LeBron James foi a primeira escolha do Draft de que ano?", ["1999", "2001", "2003"], "2003")
+        p3 = MultiplaEscolha("Quem é o maior pontuador da história da NBA?", ["Kareem", "Jordan", "LeBron"], "LeBron")
+        p4 = MultiplaEscolha("Quanto tempo dura um quarto no NBB?", ["15min", "12min", "10min"], "10min")
+        p5 = MultiplaEscolha("Qual time da NBB ganhou o mundial de clubes em 2023?", ["Franca", "Flamengo", "Minas"], "Franca")
+        p6 = VerdadeiroFalso("Michael Jordan jogou pelo Wizards.", "Verdadeiro")
+        p7 = VerdadeiroFalso("Leandinho foi o primeiro brasileiro a ganhar um título da NBA.", "Falso")
+        p8 = VerdadeiroFalso("A maior pontuação em um jogo da NBA foi de 100 pontos", "Verdadeiro")
+        p9 = VerdadeiroFalso("Kobe foi o melhor pivô da história dos Lakers", "Falso")
+        p10 = VerdadeiroFalso("Apenas um brasileiro ganhou algum prêmio individual na NBA.", "Verdadeiro")
+
 
         quiz.adicionar_pergunta(p1)
         quiz.adicionar_pergunta(p2)
+        quiz.adicionar_pergunta(p3)
+        quiz.adicionar_pergunta(p4)
+        quiz.adicionar_pergunta(p5)
+        quiz.adicionar_pergunta(p6)
+        quiz.adicionar_pergunta(p7)
+        quiz.adicionar_pergunta(p8)
+        quiz.adicionar_pergunta(p9)
+        quiz.adicionar_pergunta(p10)
 
         nome = input("Digite seu nome: ")
         pontuacao = quiz.jogar()

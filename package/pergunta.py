@@ -4,11 +4,9 @@ class Pergunta:
         self._resposta_correta = resposta_correta
 
     def apresentar(self):
-        """Apresenta a pergunta (será sobrescrito nas subclasses)."""
         print(self._enunciado)
 
     def verificar_resposta(self, resposta_usuario):
-        """Verifica se a resposta está correta."""
         return resposta_usuario.strip().lower() == self._resposta_correta.strip().lower()
 
 
