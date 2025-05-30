@@ -9,7 +9,9 @@ O BasqueteQuiz é um sistema interativo de perguntas e respostas sobre basquete,
 O sistema permite ao usuário:
 
 ✅ Jogar partidas de quiz com perguntas variadas.
+
 ✅ Visualizar o ranking de jogadores e suas pontuações.
+
 ✅ Armazenar o ranking automaticamente via serialização em JSON.
 
 ✅ Tecnologias e Paradigmas utilizados
