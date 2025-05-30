@@ -49,6 +49,7 @@ class Sistema:
             print("1. Jogar")
             print("2. Ver ranking")
             print("3. Sair")
+            print("4. Limpar ranking")
             escolha = input("Escolha uma opção: ")
 
             if escolha == "1":
@@ -59,5 +60,19 @@ class Sistema:
             elif escolha == "3":
                 print("Saindo...")
                 break
+
+            elif escolha == "4":
+                self.limpar_ranking()
+
             else:
                 print("Opção inválida!")
+
+    def limpar_ranking(self):
+        confirmacao = input("Tem certeza que deseja limpar o ranking? (s/n): ")
+        if confirmacao.lower() == 's':
+            self._ranking._jogadores = []
+            self._ranking.salvar_em_arquivo()
+            print("Ranking limpo com sucesso!")
+        else:
+            print("Operação cancelada.")
+
