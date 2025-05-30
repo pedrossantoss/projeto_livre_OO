@@ -43,6 +43,7 @@ class Sistema:
         self._ranking.adicionar_jogador(jogador)
         self._ranking.salvar_em_arquivo()
 
+
     def menu_principal(self):
         while True:
             print("\n=== Quiz de Basquete ===")
