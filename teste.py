@@ -21,7 +21,6 @@
 
 # # if __name__ == "__main__":
 # #     testar_perguntas()
-# #     # main()  ← Deixe comentado por enquanto
 
 
 from package.quiz import Quiz
