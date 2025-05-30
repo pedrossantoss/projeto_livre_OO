@@ -1,3 +1,5 @@
+# tentativas da ideia inicial
+
 # from package.sistema import Sistema
 # from package.pergunta import MultiplaEscolha, VerdadeiroFalso
 
