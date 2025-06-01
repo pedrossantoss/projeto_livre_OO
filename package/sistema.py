@@ -19,7 +19,7 @@ class Sistema:
         p4 = MultiplaEscolha("Quanto tempo dura um quarto no NBB?", ["15min", "12min", "10min"], "10min")
         p5 = MultiplaEscolha("Qual time da NBB ganhou o mundial de clubes em 2023?", ["Franca", "Flamengo", "Minas"], "Franca")
         p6 = VerdadeiroFalso("Michael Jordan jogou pelo Wizards.", "Verdadeiro")
-        p7 = VerdadeiroFalso("Leandinho foi o primeiro brasileiro a ganhar um título da NBA.", "Falso")
+        p7 = VerdadeiroFalso("Leandrinho foi o primeiro brasileiro a ganhar um título da NBA.", "Falso")
         p8 = VerdadeiroFalso("A maior pontuação em um jogo da NBA foi de 100 pontos", "Verdadeiro")
         p9 = VerdadeiroFalso("Kobe foi o melhor pivô da história dos Lakers", "Falso")
         p10 = VerdadeiroFalso("Apenas um brasileiro ganhou algum prêmio individual na NBA.", "Verdadeiro")
